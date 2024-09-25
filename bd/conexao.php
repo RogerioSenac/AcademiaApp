@@ -13,11 +13,11 @@
         public function novaConexao(){
             $this->conectar=null;
             try{
-                $this->conectar=new PDO("mysql:host=".$this->host.";dbname =".$this-db_name, $this->username, $this->password);
-            }catch (PDOExceptio $exception){
+                $this->conectar=new PDO("mysql:host=".$this->host.";dbname =".$this->db_name, $this->username, $this->password);
+            }catch (PDOException $exception){
                 echo 'Connection error: '.$exception->getMessage();
             }
-            return $this->connection
+            return $this->conectar;
         }
     }
 ?>
