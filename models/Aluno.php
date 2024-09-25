@@ -12,7 +12,7 @@
         }
 
         public function cadastrarAluno($nome,$idade,$email){
-            $cadAluno = $this->db->prepare("INSERT INT alunos(nome, idade,email)VALUES(?,?,?)");
+            $cadAluno = $this->db->prepare("INSERT INTO alunos(nome, idade,email)VALUES(?,?,?)");
             $cadAluno->execute([$nome,$idade,$email]);
         }
     }
