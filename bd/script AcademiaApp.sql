@@ -32,5 +32,3 @@ data date,
 foreign key (aluno_id) references alunos(id),
 foreign key (professor_id) references professores(id)
 );
-
-select * from alunos;

@@ -1,4 +1,5 @@
 <?php
+include '../bd/conexao.php';
     class Aluno{
 
         private $db;
@@ -11,9 +12,9 @@
             return $query ->fetchall(PDO::FETCH_ASSOC);
         }
 
-        public function cadastrarAluno($nome,$idade,$email){
-            $cadAluno = $this->db->prepare("INSERT INTO alunos(nome, idade,email)VALUES(?,?,?)");
-            $cadAluno->execute([$nome,$idade,$email]);
+        public function cadastrarAluno($nome, $email, $telefone, $data_nascimento, $genero){
+            $cadAluno = $this->db->prepare("INSERT INTO alunos(nome, email, telefone, data_nascimento, genero)VALUES(?,?,?,?,?)");
+            $cadAluno->execute([$nome, $email, $telefone, $data_nascimento, $genero]);
         }
     }
 
