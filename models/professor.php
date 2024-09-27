@@ -11,6 +11,7 @@ class Professor{
         $cadProf = $this->db->prepare("INSERT INTO professores(nome, email, telefone, especialidade)VALUES (?,?,?,?)");
         $cadProf->execute([$nome, $email, $telefone, $especialidade]);
     }
+    
 }
 
 ?>
