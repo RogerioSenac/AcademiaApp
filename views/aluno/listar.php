@@ -1,4 +1,6 @@
-<?php include('../../includes/header.php')?>
+<?php 
+include('../../includes/header.php');
+?>
 
 <div class="container mt-5">
     <h2>Lista de Alunos</h2>
@@ -15,19 +17,19 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($alunos as aluno):?>
+            <?php foreach($alunos as $listAluno):?>
                 <tr>
-                    <th scope="row"><?php echo $aluno['id'];?></th>
-                    <th scope="row"><?php echo $aluno['nome'];?></th>
-                    <th scope="row"><?php echo $aluno['email'];?></th>
-                    <th scope="row"><?php echo $aluno['telefone'];?></th>
-                    <th scope="row"><?php echo $aluno['data_nascimento'];?></th>
-                    <th scope="row"><?php echo $aluno['genero'];?></th>
-                    <th scope="row"><?php echo $aluno['data_cadastro'];?></th>
+                    <th scope="row"><?php echo $listAluno['id'];?></th>
+                    <th scope="row"><?php echo $listAluno['nome'];?></th>
+                    <th scope="row"><?php echo $listAluno['email'];?></th>
+                    <th scope="row"><?php echo $listAluno['telefone'];?></th>
+                    <th scope="row"><?php echo $listAluno['data_nascimento'];?></th>
+                    <th scope="row"><?php echo $listAluno['genero'];?></th>
+                    <th scope="row"><?php echo $listAluno['data_cadastro'];?></th>
                 </tr>
                 <?php endforeach ?>
         </tbody>
-    </table>
+    </table>    
 </div>
 
-<?php include ('../../includes.footer.php')?>
+<?php include ('../../includes/footer.php')?>
