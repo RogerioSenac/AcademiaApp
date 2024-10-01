@@ -1,5 +1,5 @@
 <?php
-include '../bd/conexao.php';
+include ('../bd/conexao.php');
     class Aluno{
 
         private $db;
@@ -13,8 +13,8 @@ include '../bd/conexao.php';
         }
         
         public function listarAlunos() {
-            $query = $this->db->query("SELECT * FROM Alunos");
-            return $query ->fetchall(PDO::FETCH_ASSOC);
+            $listAluno = $this->db->query("SELECT * FROM Alunos");
+            return $listAluno->fetchall(PDO::FETCH_ASSOC);
         }
     }
 
