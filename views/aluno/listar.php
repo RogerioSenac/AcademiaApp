@@ -1,5 +1,8 @@
 <?php 
 include('../../includes/header.php');
+// include('../../bd/conexao.php');
+
+$alunos = (new Aluno())->listarAlunos(); // Certifique-se de que esta linha está aqui
 ?>
 
 <div class="container mt-5">
@@ -17,19 +20,26 @@ include('../../includes/header.php');
             </tr>
         </thead>
         <tbody>
-            <?php foreach($alunos as $listAluno):?>
+            <?php if (empty($alunos)): ?>
                 <tr>
-                    <th scope="row"><?php echo $listAluno['id'];?></th>
-                    <th scope="row"><?php echo $listAluno['nome'];?></th>
-                    <th scope="row"><?php echo $listAluno['email'];?></th>
-                    <th scope="row"><?php echo $listAluno['telefone'];?></th>
-                    <th scope="row"><?php echo $listAluno['data_nascimento'];?></th>
-                    <th scope="row"><?php echo $listAluno['genero'];?></th>
-                    <th scope="row"><?php echo $listAluno['data_cadastro'];?></th>
+                    <td colspan="7">Nenhum aluno encontrado.</td>
                 </tr>
-                <?php endforeach ?>
+            <?php else: ?>
+                <!-- var_dump($alunos); -->
+                <?php foreach($alunos as $listAluno): ?>
+                    <tr>
+                        <th scope="row"><?php echo $listAluno['id']; ?></th>
+                        <td><?php echo $listAluno['nome']; ?></td>
+                        <td><?php echo $listAluno['email']; ?></td>
+                        <td><?php echo $listAluno['telefone']; ?></td>
+                        <td><?php echo $listAluno['data_nascimento']; ?></td>
+                        <td><?php echo $listAluno['genero']; ?></td>
+                        <td><?php echo $listAluno['data_cadastro']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </tbody>
     </table>    
 </div>
 
-<?php include ('../../includes/footer.php')?>
+<?php include ('../../includes/footer.php'); ?>
