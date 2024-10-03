@@ -2,25 +2,19 @@
 // include('controller.php');
 include_once '../models/Aluno.php'; //Certifique-se de que o caminho está correto
 
-$acao = $_GET['action'];
-
-
-//Verique se a ação foi passada pela URL
-if (isset($_GET['action']) && $_GET['action'] === $acao) {
-    // echo "Chamando a função cadastrar()!<br>"; //Depuração verificação se a rota está funcionando
+//Verifique se a ação foi passada na URL
+if(isset($_GET['action']) && $_GET['action'] === 'cadastrar'){
+    // echo "chamando a função cadastrar()!<br>";  // Depuração: Verificar se a rota está funcionando
     $controller = new AlunoController();
-    if ($acao == 'cadastrar') {
-        $controller->cadastrar();
-    } elseif ($acao == 'listar') {
-        $controller->listar();
-    } elseif ($acao == 'editar') {
-        $controller->editar();
-    } elseif ($acao == 'excluir') {
-        $controller->excluir();
-    } else {
-        echo "Nenhuma ação foi passada!<br>"; // Depuraçao : se não houve ação
-    }
+    $controller->cadastrar();
 }
+
+if(isset($_GET['action']) && $_GET['action'] === 'listar'){
+    // echo "chamando a função cadastrar()!<br>";  // Depuração: Verificar se a rota está funcionando
+    $controller = new AlunoController();
+    $controller->listar();
+}
+
 
 class AlunoController
 {
@@ -46,9 +40,8 @@ class AlunoController
     {
         // $alunoModel= $this->models('Aluno');
         $alunoModel = new Aluno();
-        $alunos = $alunoModel->listarAlunos();
-        print_r(($alunos));
-        return $alunos;
+        $alunoModel->listarAlunos();
+        return $alunoModel;
     }
 
     #Função de registrar Treinos
