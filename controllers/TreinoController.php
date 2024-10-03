@@ -6,6 +6,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
     $controller->cadastrar();  
 }
 
+if (isset($_GET['action']) && $_GET['action'] === 'listar'){
+    $controller = new TreinoController();
+    $controller->listar();
+}
+
 class TreinoController {
     public function cadastrar() {
         // Corrigido para verificar corretamente o método POST
@@ -24,6 +29,13 @@ class TreinoController {
                 echo "Dados incompletos. Verifique se todos os campos estão preenchidos.";
             }
         }
+    }
+
+    #Função de listar Treinos
+    public function listar() {
+        $treino = new Treinos();
+        $treinos = $treino->listarTreinos();
+        return $treinos;
     }
 }
 ?>

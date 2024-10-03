@@ -47,9 +47,9 @@ class AlunoController
     #Função de registrar Treinos
     public function registrarTreinos($alunoId, $treinoId)
     {
-        $treinoModel = $this->model('Treino');
+        $treinoModel = $this->models('Treino');
         $treinoModel->registrarTreino($alunoId, $treinoId);
-        header('Location: ../views/aluno/treinos/' . $alunoId);
+        // header('Location: ../views/treinos/' . $alunoId);
     }
 }
 ?>

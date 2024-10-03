@@ -8,7 +8,7 @@ $alunos = $aluno->listarAlunos();
 ?>
 
 <div class="container mt-5">
-    <h2>Lista de Alunos - nosso</h2>
+    <h2>Lista de Alunos</h2>
     <table class="table">
         <thead>
             <tr>
