@@ -1,12 +1,14 @@
 <?php 
-include('../../includes/header.php');
-// include('../../bd/conexao.php');
+include('../includes/header.php');
+include('../controllers/AlunoController.php');
+// include('../bd/conexao.php');
 
-$alunos = (new Aluno())->listarAlunos(); // Certifique-se de que esta linha est√° aqui
+$aluno = new Aluno();
+$alunos = $aluno->listarAlunos();
 ?>
 
 <div class="container mt-5">
-    <h2>Lista de Alunos</h2>
+    <h2>Lista de Alunos - nosso</h2>
     <table class="table">
         <thead>
             <tr>
@@ -20,12 +22,9 @@ $alunos = (new Aluno())->listarAlunos(); // Certifique-se de que esta linha est√
             </tr>
         </thead>
         <tbody>
-            <?php if (empty($alunos)): ?>
                 <tr>
                     <td colspan="7">Nenhum aluno encontrado.</td>
                 </tr>
-            <?php else: ?>
-                <!-- var_dump($alunos); -->
                 <?php foreach($alunos as $listAluno): ?>
                     <tr>
                         <th scope="row"><?php echo $listAluno['id']; ?></th>
@@ -37,9 +36,8 @@ $alunos = (new Aluno())->listarAlunos(); // Certifique-se de que esta linha est√
                         <td><?php echo $listAluno['data_cadastro']; ?></td>
                     </tr>
                 <?php endforeach; ?>
-            <?php endif; ?>
         </tbody>
     </table>    
 </div>
 
-<?php include ('../../includes/footer.php'); ?>
+<?php include ('../includes/footer.php'); ?>

@@ -32,3 +32,9 @@ data date,
 foreign key (aluno_id) references alunos(id),
 foreign key (professor_id) references professores(id)
 );
+
+select * from alunos;
+select * from professores;
+select * from treinos;
+
+alter table treinos modify data timestamp default current_timestamp;
