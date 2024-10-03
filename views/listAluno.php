@@ -22,22 +22,19 @@ $alunos = $aluno->listarAlunos();
             </tr>
         </thead>
         <tbody>
-                <tr>
-                    <td colspan="7">Nenhum aluno encontrado.</td>
-                </tr>
-                <?php foreach($alunos as $listAluno): ?>
-                    <tr>
-                        <th scope="row"><?php echo $listAluno['id']; ?></th>
-                        <td><?php echo $listAluno['nome']; ?></td>
-                        <td><?php echo $listAluno['email']; ?></td>
-                        <td><?php echo $listAluno['telefone']; ?></td>
-                        <td><?php echo $listAluno['data_nascimento']; ?></td>
-                        <td><?php echo $listAluno['genero']; ?></td>
-                        <td><?php echo $listAluno['data_cadastro']; ?></td>
-                    </tr>
-                <?php endforeach; ?>
+            <?php foreach($alunos as $listAluno): ?>
+            <tr>
+                <th scope="row"><?php echo $listAluno['id']; ?></th>
+                <td><?php echo $listAluno['nome']; ?></td>
+                <td><?php echo $listAluno['email']; ?></td>
+                <td><?php echo $listAluno['telefone']; ?></td>
+                <td><?php echo $listAluno['data_nascimento']; ?></td>
+                <td><?php echo $listAluno['genero']; ?></td>
+                <td><?php echo $listAluno['data_cadastro']; ?></td>
+            </tr>
+            <?php endforeach; ?>
         </tbody>
-    </table>    
+    </table>
 </div>
 
 <?php include ('../includes/footer.php'); ?>
