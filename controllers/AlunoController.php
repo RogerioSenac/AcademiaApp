@@ -10,7 +10,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'cadastrar'){
 }
 
 if(isset($_GET['action']) && $_GET['action'] === 'listar'){
-    // echo "chamando a função cadastrar()!<br>";  // Depuração: Verificar se a rota está funcionando
+    // echo "chamando a função listar()!<br>";  // Depuração: Verificar se a rota está funcionando
     $controller = new AlunoController();
     $controller->listar();
 }
@@ -39,9 +39,9 @@ class AlunoController
     public function listar()
     {
         // $alunoModel= $this->models('Aluno');
-        $alunoModel = new Aluno();
-        $alunoModel->listarAlunos();
-        return $alunoModel;
+        $aluno = new Aluno();
+        $alunos = $aluno->listarAlunos();
+        return $alunos;
     }
 
     #Função de registrar Treinos
@@ -52,3 +52,4 @@ class AlunoController
         header('Location: ../views/aluno/treinos/' . $alunoId);
     }
 }
+?>
