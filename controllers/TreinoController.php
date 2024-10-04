@@ -33,7 +33,7 @@ class TreinoController {
 
     #Função de listar Treinos
     public function listar() {
-        $treino = new Treinos();
+        $treino = new Treino;
         $treinos = $treino->listarTreinos();
         return $treinos;
     }
