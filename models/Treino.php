@@ -1,6 +1,6 @@
 <?php
 include ('../bd/conexao.php');
-$treino = new Treino();
+$treino = new Treino;
 $treinos = $treino->listarTreinos();
 
 class Treino{
@@ -17,7 +17,7 @@ class Treino{
 
     public function listarTreinos() {
         try{
-            $listAluno = $this->db->query("SELECT * FROM treinos");
+            $listTreino = $this->db->query("SELECT * FROM treinos");
             return $listTreino->fetchAll(PDO::FETCH_ASSOC);
         }catch (Exception $e) {
             error_log("Erro ao listar Treinos: ".$e->getMessage());

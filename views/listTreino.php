@@ -1,6 +1,6 @@
 <?php
 include('../includes/header.php');
-include('../controllers/AlunoController.php');
+include('../controllers/TreinoController.php');
 
 $treino = new Treino();
 $treinos = $treino->listarTreinos();
