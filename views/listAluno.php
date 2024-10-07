@@ -31,6 +31,9 @@ $alunos = $aluno->listarAlunos();
                 <td><?php echo $listAluno['data_nascimento']; ?></td>
                 <td><?php echo $listAluno['genero']; ?></td>
                 <td><?php echo $listAluno['data_cadastro']; ?></td>
+                <td>
+                    <a href="editarAluno.php?id=<?php echo $listAluno['id']; ?>" class="btn btn-warning">Editar</a>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>

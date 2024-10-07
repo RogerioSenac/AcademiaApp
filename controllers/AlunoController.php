@@ -44,12 +44,27 @@ class AlunoController
         return $alunos;
     }
 
-    #Função de registrar Treinos
-    public function registrarTreinos($alunoId, $treinoId)
+    #Função de Editar alunos
+    public function editar()
     {
-        $treinoModel = $this->models('Treino');
-        $treinoModel->registrarTreino($alunoId, $treinoId);
-        // header('Location: ../views/treinos/' . $alunoId);
+        if($_SERVER['REQUEST_METHOD'==='POST']){
+            $id=$_POST['id'];
+            $nome=$_POST['nome'];
+            $email=$_POST['email'];
+            $telefone=$_POST['telefone'];
+            $data_nascimento=$_POST['data_nascimento'];
+            $genero=$_POST['genero'];
+        }
+
+        if($id && $nome && $email && $telefone && $data_nascimento && $genero){
+            $alunoModel = new Aluno();
+            $alunoModel->editarAluno($id, $nome, $email, $telefone, $data_nascimento, $genero);
+
+            header('Location:listAluno.php');
+        }else{
+            echo "Dados Invalidos !<br>";
+        }
     }
+
 }
 ?>
