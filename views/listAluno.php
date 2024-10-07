@@ -22,17 +22,17 @@ $alunos = $aluno->listarAlunos();
             </tr>
         </thead>
         <tbody>
-            <?php foreach($alunos as $listAluno): ?>
+            <?php foreach($alunos as $aluno): ?>
             <tr>
-                <th scope="row"><?php echo $listAluno['id']; ?></th>
-                <td><?php echo $listAluno['nome']; ?></td>
-                <td><?php echo $listAluno['email']; ?></td>
-                <td><?php echo $listAluno['telefone']; ?></td>
-                <td><?php echo $listAluno['data_nascimento']; ?></td>
-                <td><?php echo $listAluno['genero']; ?></td>
-                <td><?php echo $listAluno['data_cadastro']; ?></td>
+                <th scope="row"><?php echo $aluno['id']; ?></th>
+                <td><?php echo $aluno['nome']; ?></td>
+                <td><?php echo $aluno['email']; ?></td>
+                <td><?php echo $aluno['telefone']; ?></td>
+                <td><?php echo $aluno['data_nascimento']; ?></td>
+                <td><?php echo $aluno['genero']; ?></td>
+                <td><?php echo $aluno['data_cadastro']; ?></td>
                 <td>
-                    <a href="editarAluno.php?id=<?php echo $listAluno['id']; ?>" class="btn btn-warning">Editar</a>
+                    <a href="editarAluno.php?id=<?php echo $aluno['id']; ?>" class="btn btn-warning">Editar</a>
                 </td>
             </tr>
             <?php endforeach; ?>

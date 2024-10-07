@@ -2,19 +2,16 @@
 // include('controller.php');
 include_once '../models/Aluno.php'; //Certifique-se de que o caminho está correto
 
-//Verifique se a ação foi passada na URL
-if(isset($_GET['action']) && $_GET['action'] === 'cadastrar'){
-    // echo "chamando a função cadastrar()!<br>";  // Depuração: Verificar se a rota está funcionando
+if (isset($_GET['action'])) {
     $controller = new AlunoController();
-    $controller->cadastrar();
+    if ($_GET['action'] === 'cadastrar') {
+        $controller->cadastrar();
+    } elseif ($_GET['action'] === 'listar') {
+        $controller->listar();
+    } elseif ($_GET['action'] === 'editar') {
+        $controller->editar();
+    }
 }
-
-if(isset($_GET['action']) && $_GET['action'] === 'listar'){
-    // echo "chamando a função listar()!<br>";  // Depuração: Verificar se a rota está funcionando
-    $controller = new AlunoController();
-    $controller->listar();
-}
-
 
 class AlunoController
 {
@@ -47,24 +44,25 @@ class AlunoController
     #Função de Editar alunos
     public function editar()
     {
-        if($_SERVER['REQUEST_METHOD'==='POST']){
-            $id=$_POST['id'];
-            $nome=$_POST['nome'];
-            $email=$_POST['email'];
-            $telefone=$_POST['telefone'];
-            $data_nascimento=$_POST['data_nascimento'];
-            $genero=$_POST['genero'];
+        if ($_SERVER['REQUEST_METHOD' === 'POST']) {
+            $id = $_POST['id'];
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $telefone = $_POST['telefone'];
+            $data_nascimento = $_POST['data_nascimento'];
+            $genero = $_POST['genero'];
+
+
+            if ($id && $nome && $email && $telefone && $data_nascimento && $genero) {
+                $alunoModel = new Aluno();
+                $alunoModel->editarAluno($id, $nome, $email, $telefone, $data_nascimento, $genero);
+
+                header('Location:listAluno.php');
+            } else {
+                echo "Dados Invalidos !<br>";
+            }
         }
 
-        if($id && $nome && $email && $telefone && $data_nascimento && $genero){
-            $alunoModel = new Aluno();
-            $alunoModel->editarAluno($id, $nome, $email, $telefone, $data_nascimento, $genero);
-
-            header('Location:listAluno.php');
-        }else{
-            echo "Dados Invalidos !<br>";
-        }
     }
-
 }
 ?>
