@@ -35,9 +35,9 @@ class Aluno {
         return $buscaAluno->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function editarAluno($id, $nome, $email, $telefone, $data_nascimento, $genero) {
-        $editAluno = $this->db->prepare("UPDATE alunos SET nome=?, email=?, telefone=?, data data_nascimento=?, genero=? WHERE id=?");
-        $editAluno->execute([$nome, $email, $telefone, $data_nascimento, $genero, $id]);
+    public function editarAluno($id,$nome, $email, $telefone, $data_nascimento, $genero) {
+        $editAluno = $this->db->prepare("UPDATE alunos SET nome=?, email=?, telefone=?, data_nascimento=?, genero=? WHERE id=?");
+        $editAluno->execute([$nome, $email, $telefone, $data_nascimento, $genero,$id]);
     }
 }
 ?>
