@@ -28,5 +28,16 @@ class Aluno {
             return []; // Retorne um array vazio em caso de erro
         }
     }
+
+    public function buscarAlunoPorId($id) {
+        $buscaAluno = $this->db->prepare("SELECT * FROM alunos WHERE id=?");
+        $buscaAluno->execute([$id]);
+        return $buscaAluno->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function editarAluno($id, $nome, $email, $telefone, $data_nascimento, $genero) {
+        $editAluno = $this->db->prepare("UPDATE alunos SET nome=?, email=?, telefone=?, data data_nascimento=?, genero=? WHERE id=?");
+        $editAluno->execute([$nome, $email, $telefone, $data_nascimento, $genero, $id]);
+    }
 }
 ?>

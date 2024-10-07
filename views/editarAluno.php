@@ -10,9 +10,9 @@ $alunoModel = new Aluno();
 #Verificar se foi passa ID do URL
 if(isset ($_GET['id'])){
     $id=$_GET['id'];
-    $aluno=$alunoModel->buscarAluno($id);
+    $aluno=$alunoModel->buscarAlunoPorId();
     #Verifica se o id foi passado
-    $if($aluno){
+    if($aluno){
         echo "Aluno não encontrado";
     }else {
         echo "ID do aluno não informado";
