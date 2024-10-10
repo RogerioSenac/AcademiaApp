@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!--Formulario para edição-->
 
-<div class="Container mt-5">
+<div class="container mt-5">
     <h2>Editar Alunos</h2>
     <form method="POST">
         <div class="mb-3">

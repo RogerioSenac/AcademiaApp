@@ -42,7 +42,7 @@ class AlunoController
     }
 
     #Função de Editar alunos
-    public function editar()
+    public function editar($id)
     {
         if ($_SERVER['REQUEST_METHOD' === 'POST']) {
             $id = $_POST['id'];

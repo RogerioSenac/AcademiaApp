@@ -55,7 +55,7 @@ class professorController
 
             if ($id && $nome && $email && $telefone && $especialidade) {
                 $professorModel = new professor();
-                $professorModel->editarProfessor($id, $nome, $email, $telefone, $especialidade);
+                $professorModel->editarprofessor($id, $nome, $email, $telefone, $especialidade);
 
                 header('Location:listprofessor.php');
             } else {
