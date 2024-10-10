@@ -4,7 +4,7 @@ $professor = new Professor();
 $professores = $professor->listarProfessor();
 
 // Instanciar a classe e listar alunos
-$professor = new ProfessorController;
+// $professor = new ProfessorController;
 
 class Professor
 {
@@ -33,14 +33,14 @@ class Professor
 
     public function buscarProfessorPorId($id) 
     {
-        $buscaProfessor = $this->db->prepare("SELECT * FROM professor WHERE id=?");
+        $buscaProfessor = $this->db->prepare("SELECT * FROM professores WHERE id=?");
         $buscaProfessor->execute([$id]);
         return $buscaProfessor->fetch(PDO::FETCH_ASSOC);
     }
 
     public function editarProfessor($id,$nome, $email, $telefone, $especialidade,) 
     {
-        $editProfessor = $this->db->prepare("UPDATE professor SET nome=?, email=?, telefone=?, especialidade= WHERE id=?");
+        $editProfessor = $this->db->prepare("UPDATE professores SET nome=?, email=?, telefone=?, especialidade=? WHERE id=?");
         $editProfessor->execute([$nome, $email, $telefone, $especialidade,$id]);
     }
 }

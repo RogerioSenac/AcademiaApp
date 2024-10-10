@@ -4,9 +4,6 @@ include('../bd/conexao.php');
 $aluno = new Aluno();
 $alunos = $aluno->listarAlunos();
 
-// Instanciar a classe e listar alunos
-// $aluno = new AlunoController;
-
 class Aluno
 {
     private $db;

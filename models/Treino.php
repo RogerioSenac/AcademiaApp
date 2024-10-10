@@ -24,5 +24,18 @@ class Treino{
             return[]; //Retorne um array vazio em caso de erro
         }
     }
+    
+    public function buscarTreinoPorId($id)
+    {
+        $buscaTreino = $this->db->prepare("SELECT * FROM treinos WHERE id=?");
+        $buscaTreino->execute([$id]);
+        return $buscaTreino->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function editarTreino($descricao, $idAluno, $idProfessor, $id)
+    {
+        $editTreino = $this->db->prepare("UPDATE treinos SET descricao=?, aluno_id=?, professor_id=? WHERE id=?");
+        $editTreino->execute([$descricao, $idAluno, $idProfessor, $id]);
+    }
 }
 ?>
