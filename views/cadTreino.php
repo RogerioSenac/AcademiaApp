@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1> Cadastrar Treinos </h1>
-        <form action="../../controllers/treinoController.php?action=cadastrar" method="POST">
+        <form action="../controllers/TreinoController.php?action=cadastrar" method="POST">
 
             <div class="mb-3">
                 <label for="descricao" class="form-label">Descrição do Treino :</label>

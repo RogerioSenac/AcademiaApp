@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $telefone = $_POST['telefone'];
     $data_nascimento = $_POST['data_nascimento'];
     $genero = $_POST['genero'];
-
     
     if ($nome && $email && $telefone && $data_nascimento && $genero && $id) {
         $alunoModel->editarAluno($id, $nome, $email, $telefone, $data_nascimento, $genero);
@@ -32,17 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-
-
 #Verificar se todos os campos foram pasdsados para realizar a edição
 
 ?>
 
-
-
 <!--Formulario para edição-->
 
-<div class="Container mt-5">
+<div class="container mt-5">
     <h2>Editar Alunos</h2>
     <form method="POST">
         <div class="mb-3">

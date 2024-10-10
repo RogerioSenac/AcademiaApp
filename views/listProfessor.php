@@ -18,22 +18,21 @@ $professores = $professor->listarProfessor();
                 <td scope="col">Telefone</td>
                 <td scope="col">Especialildade</td>
                 <td scope="col">Data Contratação</td>
+                <td scope="col">Ação</td>
             </tr>
         </thead>
         <tbody>
+            <?php foreach($professores as $professor): ?>
             <tr>
-                <td colspan="7">Nenhum professor encontrado.</td>
-            </tr>
-            <?php foreach($professores as $listProfessor): ?>
-            <tr>
-                <th scope="row"><?php echo $listProfessor['id']; ?></th>
-                <td><?php echo $listProfessor['nome']; ?></td>
-                <td><?php echo $listProfessor['email']; ?></td>
-                <td><?php echo $listProfessor['telefone']; ?></td>
-                <td><?php echo $listProfessor['especialidade']; ?></td>
-                <td><?php echo $listProfessor['data_contratação']; ?></td>
+                <th scope="row"><?php echo $professor['id']; ?></th>
+                <td><?php echo $professor['nome']; ?></td>
+                <td><?php echo $professor['email']; ?></td>
+                <td><?php echo $professor['telefone']; ?></td>
+                <td><?php echo $professor['especialidade']; ?></td>
+                <td><?php echo $professor['data_contratação']; ?></td>
                 <td>
-                    <a href="editarProfessor.php?id=<?php echo $listProfessor['id']; ?>" class="btn btn-warning">Editar</a>
+                    <a href="editarProfessor.php?id=<?php echo $professor['id']; ?>"
+                        class="btn btn-warning">Editar</a>
                 </td>
             </tr>
             <?php endforeach; ?>

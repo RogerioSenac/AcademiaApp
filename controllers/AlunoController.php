@@ -9,7 +9,7 @@ if (isset($_GET['action'])) {
     } elseif ($_GET['action'] === 'listar') {
         $controller->listar();
     } elseif ($_GET['action'] === 'editar') {
-        $controller->editar();
+        $controller->editar($id);
     }
 }
 
@@ -19,6 +19,7 @@ class AlunoController
     public function cadastrar()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+             // Verificamos se as chaves existem antes de acessá-las
             $nome = $_POST['nome'];
             $email = $_POST['email'];
             $telefone = $_POST['telefone'];
@@ -42,7 +43,7 @@ class AlunoController
     }
 
     #Função de Editar alunos
-    public function editar()
+    public function editar($id)
     {
         if ($_SERVER['REQUEST_METHOD' === 'POST']) {
             $id = $_POST['id'];
