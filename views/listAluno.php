@@ -19,6 +19,7 @@ $alunos = $aluno->listarAlunos();
                 <td scope="col">Data de Nascimento</td>
                 <td scope="col">Genero</td>
                 <td scope="col">Data Cadastro</td>
+                <td scope="col">Ação</td>
             </tr>
         </thead>
         <tbody>

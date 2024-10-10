@@ -1,24 +1,21 @@
 <?php
-include '../models/professor.php'; //Certifique-se de que o caminho esta correto
+// include('controller.php');
+include_once '../models/professor.php'; //Certifique-se de que o caminho está correto
 
-/*Verifique se a ação foi passada pela URL*/
-if (isset($_GET['action']) && $_GET['action'] === 'cadastrar') {
-    // echo "chamando a função cadastrar()!<br>";  // Depuração: Verificar se a rota está funcionando
-    $controller = new ProfessorController();
-    $controller->cadastrar();
+if (isset($_GET['action'])) {
+    $controller = new professorController();
+    if ($_GET['action'] === 'cadastrar') {
+        $controller->cadastrar();
+    } elseif ($_GET['action'] === 'listar') {
+        $controller->listar();
+    } elseif ($_GET['action'] === 'editar') {
+        $controller->editar();
+    }
 }
 
-if (isset($_GET['action']) && $_GET['action'] === 'listar') {
-    //Chamando a função listar() // Depuração : Verificar se a rota está funcionando
-    $controller = new ProfessorController();
-    $controller->listar();
-
-
-}
-
-
-class ProfessorController
+class professorController
 {
+    #Funçao de cadastro de professors
     public function cadastrar()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -26,21 +23,46 @@ class ProfessorController
             $email = $_POST['email'];
             $telefone = $_POST['telefone'];
             $especialidade = $_POST['especialidade'];
+           
 
             if ($nome && $email && $telefone && $especialidade) {
-                $profModel = new Professor();
-                $profModel->cadastrarProfessor($nome, $email, $telefone, $especialidade);
+                $professorModel = new professor();
+                $professorModel->cadastrarprofessor($nome, $email, $telefone, $especialidade, );
             }
         }
     }
 
-    #Funçao de listar professor
-
+    #Funçao de listar professors
     public function listar()
     {
-        $professor = new Professor();
-        $professores = $professor->listarProfessor();
-        return $professores;
+        // $professorModel= $this->models('professor');
+        $professor = new professor();
+        $professors = $professor->listarprofessor();
+        return $professors;
+    }
+
+    #Função de Editar professors
+    public function editar()
+    {
+        if ($_SERVER['REQUEST_METHOD' === 'POST']) {
+            $id = $_POST['id'];
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $telefone = $_POST['telefone'];
+            $especialidade = $_POST['especialidade'];
+           
+
+
+            if ($id && $nome && $email && $telefone && $especialidade) {
+                $professorModel = new professor();
+                $professorModel->editarProfessor($id, $nome, $email, $telefone, $especialidade);
+
+                header('Location:listprofessor.php');
+            } else {
+                echo "Dados Invalidos !<br>";
+            }
+        }
+
     }
 }
 ?>

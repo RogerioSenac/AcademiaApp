@@ -45,10 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="Container mt-5">
     <h2>Editar Alunos</h2>
     <form method="POST">
-        <?php
-
-
-        ?>
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
             <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $aluno['nome']; ?>"

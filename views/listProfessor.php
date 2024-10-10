@@ -32,6 +32,9 @@ $professores = $professor->listarProfessor();
                 <td><?php echo $listProfessor['telefone']; ?></td>
                 <td><?php echo $listProfessor['especialidade']; ?></td>
                 <td><?php echo $listProfessor['data_contratação']; ?></td>
+                <td>
+                    <a href="editarProfessor.php?id=<?php echo $listProfessor['id']; ?>" class="btn btn-warning">Editar</a>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
