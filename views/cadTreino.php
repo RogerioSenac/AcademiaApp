@@ -1,4 +1,4 @@
-<?php include('../../includes/header.php')?>
+<?php include('../includes/header.php')?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,5 +32,5 @@
         </form>
     </div>
 </body>
-<?php include('../../includes/footer.php')?>
+<?php include('../includes/footer.php')?>
 </html>
