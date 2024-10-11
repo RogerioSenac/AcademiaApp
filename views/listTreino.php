@@ -27,6 +27,9 @@ $treinos = $treino->listarTreinos();
                 <td><?php echo $treino['professor_id']; ?></td>
                 <td>
                     <a href="editarTreino.php?id=<?php echo $treino['id']; ?>" class="btn btn-warning">Editar</a>
+                    <a href="deletarTreino.php?id=<?php echo $treino['id']; ?>"
+                    class="btn btn-danger" 
+                    onclick="return confirm('Tem certeza que deseja deletar este registro?')">Excluir</a>
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -41,5 +41,14 @@ class Aluno
         $editAluno = $this->db->prepare("UPDATE alunos SET nome=?, email=?, telefone=?, data_nascimento=?, genero=? WHERE id=?");
         $editAluno->execute([$nome, $email, $telefone, $data_nascimento, $genero, $id]);
     }
+
+    public function deletarAluno($id)
+    {
+        $deleteAluno = $this->db->prepare("DELETE FROM alunos WHERE id=?");
+        $deleteAluno->execute([$id]);
+    
+        header('Location: listAluno.php');
+    }
+    
 }
 ?>

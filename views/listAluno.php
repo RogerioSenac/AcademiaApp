@@ -34,6 +34,9 @@ $alunos = $aluno->listarAlunos();
                 <td><?php echo $aluno['data_cadastro']; ?></td>
                 <td>
                     <a href="editarAluno.php?id=<?php echo $aluno['id']; ?>" class="btn btn-warning">Editar</a>
+                    <a href="deletarAluno.php?id=<?php echo $aluno['id']; ?>"
+                    class="btn btn-danger" 
+                    onclick="return confirm('Tem certeza que deseja deletar este registro?')">Excluir</a>
                 </td>
             </tr>
             <?php endforeach; ?>
