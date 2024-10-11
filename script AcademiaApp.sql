@@ -34,3 +34,5 @@ foreign key (professor_id) references professores(id)
 );
 
 select * from alunos;
+select * from professores;
+select * from treinos;
