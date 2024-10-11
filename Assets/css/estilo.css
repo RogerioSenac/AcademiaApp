@@ -1,0 +1,48 @@
+body {
+    background-image: url('../../Assets/imagem/fundo_parede.jpeg');
+}
+
+.cabecalho-fundo {
+    background-image: url('../../Assets/imagem/fundo_parede.jpeg');
+    
+}
+
+span{
+    color: white;
+}
+
+.cabecalho-fundo h1 {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+    /* color: red; */
+   margin-left: 180px;
+   color: white;
+}
+
+.cabecalho-fundo li {
+    font-style: bold;
+    color: white;
+    font-size: larger;
+}
+
+.cabecalho-navbar {
+    opacity: 1;
+}
+
+.cabecalho-img {
+    width: 13%;
+    height: 13%;
+    border-radius: 50%;
+    margin-left: 70px;
+    margin-top: 1px;
+}
+
+.cabecalho-titulo {
+    font-family: fantasy;
+    font-size: 3em;
+    padding-left: 10px;
+    text-decoration: none;
+    color: blue;
+}
