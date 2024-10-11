@@ -15,7 +15,7 @@ $treinos = $treino->listarTreinos();
                 <td scope="col">Descrição</td>
                 <td scope="col">Aluno</td>
                 <td scope="col">Professor</td>
-                <td scope="col">Ação</td>
+                <td scope="col">Selecione a Ação</td>
             </tr>
         </thead>
         <tbody>
