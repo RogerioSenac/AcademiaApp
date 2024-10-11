@@ -43,5 +43,13 @@ class Professor
         $editProfessor = $this->db->prepare("UPDATE professores SET nome=?, email=?, telefone=?, especialidade=? WHERE id=?");
         $editProfessor->execute([$nome, $email, $telefone, $especialidade,$id]);
     }
+
+    public function deletarProfessor($id)
+    {
+        $deleteprofessor = $this->db->prepare("DELETE FROM professores WHERE id=?");
+        $deleteprofessor->execute([$id]);
+    
+        header('Location: listprofessor.php');
+    }
 }
 ?>

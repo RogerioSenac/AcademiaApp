@@ -37,5 +37,13 @@ class Treino{
         $editTreino = $this->db->prepare("UPDATE treinos SET descricao=?, aluno_id=?, professor_id=? WHERE id=?");
         $editTreino->execute([$descricao, $idAluno, $idProfessor, $id]);
     }
+
+    public function deletarTreino($id)
+    {
+        $deletetreino = $this->db->prepare("DELETE FROM treinos WHERE id=?");
+        $deletetreino->execute([$id]);
+    
+        header('Location: listTreino.php');
+    }
 }
 ?>
