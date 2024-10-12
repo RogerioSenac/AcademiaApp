@@ -11,9 +11,9 @@
 
 <body>
     <nav class="cabecalho-fundo navbar navbar-expand-lg navbar-light bg-light">
-        <img class="cabecalho-img" src="Assets/imagem/logo_academia.jpeg" alt="Logo">
+        <img class="cabecalho-img" src="Assets/imagem/atleta_masc_vintage.jpeg" alt="Logo">
         
-        <h1>Academia Whey Proteic</h1>
+        <h1>Academia Spartacus</h1>
 <!-- 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav-item">

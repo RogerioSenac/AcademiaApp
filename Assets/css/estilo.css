@@ -46,3 +46,16 @@ span{
     text-decoration: none;
     color: blue;
 }
+
+.card-body .card-text{
+    display: block;
+    align-content: center;
+    text-align: center;
+    text-align-last: center;
+}
+
+.card-body .btn{
+    
+   margin-left: 50px;
+
+}

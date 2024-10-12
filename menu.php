@@ -43,7 +43,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
             <!-- Card 1 -->
             <div class="col-md-4 mb-4">
                 <div class="card card-um">
-                    <img class="card-img-top" src="Assets/imagem/icon_aluno.jpeg">
+                    <img class="card-img-top" src="Assets/imagem/atleta_fem_vintage.jpeg">
                     <div class="card-body">
                         <h1 class="card-text">Controle de Alunos.</h1>
                         <a href="./views/cadAluno.php" class="btn btn-primary">Cadastrar</a>
@@ -56,7 +56,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
             <!-- Card 2 -->
             <div class="col-md-4 mb-4">
                 <div class="card card-um">
-                    <img class="card-img-top" src="Assets/imagem/icon_personal.jpeg">
+                    <img class="card-img-top" src="Assets/imagem/spartacus.jpeg">
                     <div class="card-body">
                         <h1 class="card-text">Controle de Instrutores.</h1>
                         <a href="./views/cadProfessor.php" class="btn btn-primary">Cadastrar</a>
@@ -68,7 +68,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
             <!-- Card 3 -->
             <div class="col-md-4 mb-4">
                 <div class="card card-um">
-                    <img class="card-img-top" src="Assets/imagem/icon_treinos.jpeg">
+                    <img class="card-img-top" src="Assets/imagem/atleta_coresfortes.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle dos Treinos.</h1>
                         <a href="./views/cadTreino.php" class="btn btn-primary">Cadastrar</a>
