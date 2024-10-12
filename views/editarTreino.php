@@ -32,10 +32,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/css/estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 <!--Formulario para edição-->
 
 <div class="container mt-5">
-    <h2>Editar Treinos</h2>
+    <h1>Editar Treinos</h1>
     <form method="POST">
         <div class="mb-3">
             <label for="descricao" class="form-label">Descrição</label>
@@ -56,4 +68,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 </div>
 
-<?php include('../includes/footer.php'); ?>
+<!-- <?php include('../includes/footer.php'); ?> -->

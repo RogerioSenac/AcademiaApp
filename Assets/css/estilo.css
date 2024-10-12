@@ -1,27 +1,48 @@
-body {
+/* body {
     background-image: url('../../Assets/imagem/fundo_parede.jpeg');
+} */
+
+/* .cabecalho-fundo {
+    background-image: url('../../Assets/imagem/fundo_parede.jpeg');
+
+} */
+
+/*------- Seçao Index ----------*/
+
+.container-cabecalho {
+    background-image: url('../../Assets/imagem/fundo_parede.jpeg');
+    padding: 20px;
+    text-align: center;
 }
 
-.cabecalho-fundo {
-    background-image: url('../../Assets/imagem/fundo_parede.jpeg');
-
+.container-cabecalho .img {
+    border-radius: 50%;
 }
+
 
 span {
     color: white;
 }
 
-.cabecalho-fundo h1{
+
+.container-cabecalho h1 {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.cabecalho-fundo h1 {
     display: flex;
     position: relative;
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 205px;
-    /* margin-right: 150px; */ */
+    /* margin-right: 150px; */
+    */
     /* color: red; */
     /* margin-left: 180px; */
-    
+
 }
 
 .cabecalho-fundo li {
@@ -40,13 +61,18 @@ span {
     border-radius: 50%;
     margin-left: 70px;
     margin-top: 1px;
+    border-radius: 50%;
 }
 
-.cabecalho-titulo{
+.cabecalho-titulo {
     display: flex;
     position: relative;
     color: red;
     justify-content: center;
+}
+
+.card-body {
+    background-color: rgba(99, 151, 151, 0.815);
 }
 
 .card-body .card-text {
