@@ -50,10 +50,11 @@
         <article>
             <h3>Projetamoso futuro do seu negócio</h3>
             <ol>
-                <li>Pensamos na melhor solução.</li>
-                <li>Desenvolvemos o produto em parceria consiigo</li>
-                <li>Aplicamos a solução na empresa</li>
-                <li>Fazemos a mon</li>
+                <li>A motivação pode te levar a começar, a disciplina te levará até o fim.</li>
+                <li>Cada repetição conta, cada desafio superado te torna mais forte.</li>
+                <li>O treino de hoje é o resultado que você verá amanhã.</li>
+                <li>Não deixe para amanhã o que você pode conquistar hoje.</li>
+                <li>A mudança começa quando o desejo de permanecer o mesmo é superado.</li>
             </ol>
         </article>
     </section>
@@ -73,4 +74,5 @@
     </footer>
 
 </body>
+
 </html>
