@@ -4,21 +4,24 @@ body {
 
 .cabecalho-fundo {
     background-image: url('../../Assets/imagem/fundo_parede.jpeg');
-    
+
 }
 
-span{
+span {
     color: white;
 }
 
-.cabecalho-fundo h1 {
+.cabecalho-fundo h1{
     display: flex;
+    position: relative;
+    text-align: center;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
-    /* margin-left: 150px;
-    margin-right: 150px; */
+    margin-left: 205px;
+    /* margin-right: 150px; */ */
     /* color: red; */
-   margin-left: 180px;
-   color: white;
+    /* margin-left: 180px; */
+    
 }
 
 .cabecalho-fundo li {
@@ -39,23 +42,35 @@ span{
     margin-top: 1px;
 }
 
-.cabecalho-titulo {
-    font-family: fantasy;
-    font-size: 3em;
-    padding-left: 10px;
-    text-decoration: none;
-    color: blue;
+.cabecalho-titulo{
+    display: flex;
+    position: relative;
+    color: red;
+    justify-content: center;
 }
 
-.card-body .card-text{
+.card-body .card-text {
     display: block;
     align-content: center;
     text-align: center;
     text-align-last: center;
 }
 
-.card-body .btn{
-    
-   margin-left: 50px;
+.card-body .btn {
 
+    margin-left: 50px;
+
+}
+
+/* Cadastro Alunos */
+
+.mb-3 {
+    color: white;
+}
+
+.container h1 {
+    display: flex;
+    position: relative;
+    color: white;
+    justify-content: center;
 }
