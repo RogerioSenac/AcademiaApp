@@ -27,7 +27,7 @@ $alunos = $aluno->listarAlunos();
                     <td scope="col">Data de Nascimento</td>
                     <td scope="col">Genero</td>
                     <td scope="col">Data Cadastro</td>
-                    <td scope="col">Ação</td>
+                    <td scope="col">Escolha a Ação</td>
                 </tr>
             </thead>
             <tbody>
@@ -52,9 +52,6 @@ $alunos = $aluno->listarAlunos();
         </table>
     </div>
     
+    <?php include ('../includes/footer.php'); ?>
 </body>
 </html>
-
-
-
-<?php include ('../includes/footer.php'); ?>

@@ -13,7 +13,7 @@
 <body>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container text-center">
-            <span class="text-muted">Academia- Todos os direitos reservados a DevelopersRGT</span>
+            <span class="text-muted">Academia - Todos os direitos reservados a DevelopersRGT</span>
         </div>
     </footer>
 </body>

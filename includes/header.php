@@ -11,7 +11,7 @@
 
 <body>
     <nav class="cabecalho-fundo navbar navbar-expand-lg navbar-light bg-light">
-        <img class="cabecalho-img" src="../Assets/imagem/atleta_masc_vintage.jpeg" alt="Logo">
+        <img class="cabecalho-img" src="/Assets/imagem/atleta_masc_vintage.jpeg" alt="Logo">
        <div class="cabecalho-titulo">
            <h1>Academia Spartacus</h1>
        </div> 

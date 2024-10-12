@@ -54,6 +54,7 @@ span {
     align-content: center;
     text-align: center;
     text-align-last: center;
+    color: black;
 }
 
 .card-body .btn {
