@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia Spartacus</title>
     <!--Estilos da pagina-->
-    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
 
     <!--favicon-->
     <link rel="shortcut icon" href="assets/imagem/atleta_masc_vintage.jpeg" type="image/png">
@@ -29,32 +29,33 @@
 
     <!--Navegação-->
     <nav class="container-navegacao">
-        <a href="index.html">Quem Somos</a>
+        <a href="index.php">Quem Somos</a>
         <a href="servicos.html">Nossos Serviços</a>
         <a href="contatos.html">Contatos</a>
+        <a href="login.php">Login</a>
     </nav>
 
     <!--quem somos-->
     <section class="container-quem-somos">
         <article class="servico">
-            <img src="assets/images/icon_ai.png" class="icone" alt="icone" alt="Inteligência Artificial">
+            <img class="icones" src="assets/imagem/icon_ironman.png" class="icone" alt="icone" alt="IRONMAN">
             <p class="servico-texto">
-                Somos especialistas em <span class="servico-texto-realce">Inteligência Artificial (AI)</span><br>
-                Trabalhamos para encontrar soluções tecnologicamente inteligentes para todas as áreas empresáris.
+                Somos especialistas em <span class="servico-texto-realce"> Trialo e IronMan</span><br>
+                Trabalhamos para oferecer a nossos clientes atividades físicas que podem ajudar a melhorar a saúde, o estilo de vida e superar seus limites.
             </p>
         </article>
 
         <article class="servico">
-            <img src="assets/images/icon_lab.png" class="icone" alt="icone" alt="Laboratórios Modernos">
+            <img src="assets/imagem/icon-halter.png" class="icones" alt="icone" alt="Aparelhos Modernos">
             <p class="servico-texto">
-                Os nossos laboratórios são os mais modernos da atualidade
+                Os nossos aparelhos são os mais modernos da atualidade e nossas instalaçoes estão preparadas para atender suas necessidades.
             </p>
         </article>
 
         <article class="servico">
-            <img src="assets/images/icon_computer.png" class="icone" alt="icone" alt="Programadores experientes">
+            <img src="assets/imagem/icon_personal-removebg-preview.png" class="icones" alt="icone" alt="Programadores experientes">
             <p class="servico-texto">
-                Todos os nossos colaboradores são os técnicos mais experientes do mercado.
+                Todos os nossos colaboradores são profissionais qualificados e focados em ajudar a buscar e superar seus limites.
             </p>
         </article>
     </section>
