@@ -60,11 +60,34 @@ body {
     overflow: auto;
 }
 
+.container-video-apresenta {
+    background-color: #034291;
+    overflow: auto;
+}
+
+.apresenta {
+    float: center;
+    margin: 60px auto;
+    background-color: #079AAC;
+    /* background-color: whitesmoke; */
+    width: 50%;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.container-video-apresenta h1 {
+    color: black;
+    text-align: center;
+
+}
+
 .container-quem-somos .servico {
     float: center;
     margin: 60px auto;
     /* background-color: #079AAC; */
-    background-color: whitesmoke    ;
+    background-color: whitesmoke;
     width: 50%;
     padding: 50px;
     border-radius: 10px;
@@ -78,14 +101,16 @@ body {
     border-radius: 50%;
 }
 
-.container-quem-somos .servico-texto{
+.container-quem-somos .servico-texto {
     font-family: 'Courier New', Courier, monospace;
     margin-top: 20px;
     font-size: 1.2em;
     color: black;
-    text-align: justify; /* Alinha o texto pelo modo Justificado */
-    line-height: 1.6; /* Opicional: melhora a legibilidade */
-   
+    text-align: justify;
+    /* Alinha o texto pelo modo Justificado */
+    line-height: 1.6;
+    /* Opicional: melhora a legibilidade */
+
 }
 
 .container-quem-somos .servico-texto-realce {
@@ -230,4 +255,70 @@ footer {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+}
+
+
+/* Ícones das redes sociais */
+.social-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 0;
+    /* Remover margens para evitar problemas de layout */
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Corrigido para 'center' */
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0);
+    color: var(--color);
+    font-size: 2.5em;
+    -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    /* Efeito de espelhamento */
+}
+
+.social-icons a:hover {
+    background: var(--color);
+    color: #050801;
+    box-shadow:
+        0 0 5px var(--color),
+        0 0 25px var(--color),
+        0 0 50px var(--color),
+        0 0 200px var(--color);
+}
+
+.social-icons .facebook {
+    color: #ddd;
+    /* Azul do Facebook */
+}
+
+.social-icons .instagram {
+    color: #ddd;
+    /* Rosa do Instagram */
+}
+
+.social-icons .youtube {
+    color: #ddd;
+    /* Vermelho do YouTube */
+}
+
+.social-icons .whatsapp {
+    color: #ddd;
+    /* Verde do WhatsApp */
+}
+
+.social-icons .email {
+    color: #ddd;
+    /* Verde do WhatsApp */
+}
+
+.social-icons i {
+    font-size: 2rem;
 }
