@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <nav class="cabecalho-fundo navbar navbar-expand-lg navbar-light bg-light">
-        <img class="cabecalho-img" src="/Assets/imagem/atleta_masc_vintage.jpeg" alt="Logo">
+    <nav class="cabecalho navbar navbar-expand-lg navbar-light">
+        <!-- <img class="cabecalho-img" src="../Assets/imagem/atleta_masc_vintage.jpeg" alt="Logo"> -->
        <div class="cabecalho-titulo">
-           <h1>Academia Spartacus</h1>
+           <h1>Academia Acque Vida</h1>
        </div> 
-<!-- 
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav-item">
                 <li class="nav-item">
@@ -31,7 +31,7 @@
                     <a class="nav-link" href="../logout/">Sair</a>
                 </li>
             </ul>
-        </div> -->
+        </div>
     </nav>
 
 </body>

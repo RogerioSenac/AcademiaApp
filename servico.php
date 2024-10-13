@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inteligência Artificial</title>
+    <title>Academia Acqua Vida</title>
     <!--Estilos da pagina-->
     <link rel="stylesheet" href="assets/css/estilos.css">
 
     <!--favicon-->
-    <link rel="shortcut icon" href="assets/images/logo_empresa.png" type="image/png">
+    <link rel="shortcut icon" href="./Assets/imagem/icon_ironman.png" type="image/png">
 </head>
 
 <body>

@@ -2,10 +2,19 @@
     background-image: url('../../Assets/imagem/fundo_parede.jpeg');
 } */
 
-/* .cabecalho-fundo {
+/*------*/
+
+
+
+
+
+
+
+
+.cabecalho-fundo {
     background-image: url('../../Assets/imagem/fundo_parede.jpeg');
 
-} */
+}
 
 /*------- Seçao Index ----------*/
 
@@ -15,21 +24,27 @@
     text-align: center;
 }
 
-.container-cabecalho .img {
+.cabecalho-img{
     border-radius: 50%;
 }
-
 
 span {
     color: white;
 }
 
 
-.container-cabecalho h1 {
+/* .container-cabecalho h1 {
     margin: 0;
     color: white;
     text-decoration: none;
+} */
+
+.container-cabecalho h1 {
+    font-weight: 600;
+    font-size: 2em;
+    color: #EFE4AE;
 }
+
 
 .cabecalho-fundo h1 {
     display: flex;

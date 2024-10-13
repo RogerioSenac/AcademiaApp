@@ -10,8 +10,8 @@ session_start(); // Inicia a sessão para usar variáveis de sessão
 //     exit();
 // }
 
-$usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variável $usuario
-?>
+// $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variável $usuario
+// ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,14 +31,14 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
 
     </div>
     <div class="container my-4">
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <div class="mensagem col-md-12">
                 <div class="d-flex justify-content-between align-items-center">
                     <h1><span>Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</span></h1> <!-- Exibe o nome do usuário -->
-                    <a href="logout.php" class="btn btn-danger">Logout</a>
+                    <!-- <a href="logout.php" class="btn btn-danger">Logout</a>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
         <div class="row">
             <!-- Card 1 -->
             <div class="col-md-4 mb-1">
