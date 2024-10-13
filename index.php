@@ -28,56 +28,41 @@
 
     <!--Navegação-->
     <nav class="container-navegacao">
-        <a href="index.php">Quem Somos</a>
-        <a href="servicos.html">Nossos Serviços</a>
-        <a href="contatos.html">Contatos</a>
+        <a href="index.php">Início</a>
+        <a href="quem_somos.php">Quem Somos</a>
+        <a href="https://www.facebook.com/AcademiaAcquaVida/photos_by?locale=pt_BR" target="_blank">Fotos</a>
+        <a href="https://www.facebook.com/AcademiaAcquaVida/videos?locale=pt_BR" target="_blank">Videos</a>
+
+
         <a href="login.php">Login</a>
     </nav>
 
     <!--quem somos-->
-    <section class="container-quem-somos">
-        <article class="servico">
-            <img class="icones" src="assets/imagem/icon_ironman.png" class="icone" alt="icone" alt="IRONMAN">
-            <p class="servico-texto">
-                Seja bem-vindo à <span class="servico-texto-realce"> Academia AcquaVida </span>, onde a paixão pela saúde e bem-estar se transforma em aprendizado e prática. Somos uma <span class="servico-texto-realce">escola de natação</span> e uma <span class="servico-texto-realce">academia</span> comprometida em promover um estilo de vida saudável para todos.<br>
+    <section class="container-video-apresenta">
+        <article class="apresenta">
 
-                Nossa equipe dedicada trabalha em conjunto para oferecer um ambiente acolhedor e motivador, onde você pode desenvolver suas habilidades, melhorar sua condição física e, acima de tudo, se divertir. Venha fazer parte da nossa comunidade e descobrir como é possível unir esporte, saúde e amizade!<br>
+            <h1>Prazer somos a Acqua Vida!</h1>
 
-                Junte-se a nós na jornada em busca de um corpo saudável e uma mente equilibrada. Aqui, promovemos saúde e bem-estar para todos!
-            </p>
+            <video id="meuVideo" width="640" height="360" controls>
+                <source src="./Assets/videos/video_apresentacao.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
         </article>
 
-        <article class="servico">
-            <img src="assets/imagem/icon-halter.png" class="icones" alt="icone" alt="Aparelhos Modernos">
-            <p class="servico-texto">
-                Na <span class="servico-texto-realce"> Academia AcquaVida </span>, oferecemos uma infraestrutura de ponta, com equipamentos que garantem a melhor experiência para os nossos alunos. Nossas instalações foram cuidadosamente planejadas para atender a todas as suas necessidades, proporcionando um ambiente confortável e funcional.<br>
-
-                Estamos comprometidos em oferecer a você não apenas um espaço para treinar, mas um verdadeiro centro de saúde e bem-estar. Venha descobrir como podemos ajudar você a alcançar seus objetivos de forma eficiente e agradável!
-            </p>
-        </article>
-
-        <article class="servico">
-            <img src="assets/imagem/icon_personal-removebg-preview.png" class="icones" alt="icone" alt="Programadores experientes">
-            <p class="servico-texto">
-                Na <span class="servico-texto-realce"> Academia AcquaVida </span>, contamos com uma equipe de profissionais altamente qualificados, dedicados a ajudar você a alcançar e superar seus limites. Nossos colaboradores são especialistas em suas áreas e estão sempre prontos para oferecer orientação, motivação e suporte personalizado.<br>
-
-                Nosso compromisso é garantir que cada aluno tenha uma experiência única e transformadora, promovendo não apenas o desenvolvimento físico, mas também o fortalecimento da mente. Venha nos conhecer e descubra como podemos trabalhar juntos para que você atinja seus objetivos!
-            </p>
-        </article>
     </section>
-  
+
     <section id="mapa" class="d-flex flex-column align-items-center">
-            <div class="content text-center">
-                <!-- Card com Mapa de Geolocalização -->
-                <h4>Encontre-nos no Mapa</h4>
-                <div id="map" style="height: 350px; width: 100%;"></div>
-                <div class="card bg-transparent border-light">
-                    <div class="card-mapa">
-                        <button id="tracarRota" class="btn btn-dark">Traçar Rota</button>
-                    </div>
+        <div class="content text-center">
+            <!-- Card com Mapa de Geolocalização -->
+            <h4>Encontre-nos no Mapa</h4>
+            <div id="map" style="height: 350px; width: 100%;"></div>
+            <div class="card bg-transparent border-light">
+                <div class="card-mapa">
+                    <button id="tracarRota" class="btn btn-dark">Traçar Rota</button>
                 </div>
-        </section>
-  
+            </div>
+    </section>
+
 
     <!--Ver serviços ou contatos-->
     <section class="container-servico-contatos">
@@ -95,11 +80,19 @@
 
 </body>
 
-    <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Adiciona um evento que detecta quando o vídeo termina
+    document.getElementById('meuVideo').addEventListener('ended', function() {
+        // Redireciona para index.php
+        window.location.href = 'index.php';
+    });
+</script>
 
-    <!-- Script para rolagem suave -->
-    <script>
+<!-- Scripts Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script para rolagem suave -->
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         const links = document.querySelectorAll('a[href^="#"]');
         links.forEach(link => {
@@ -112,12 +105,11 @@
             });
         });
     });
+</script>
 
-    </script>
-
-    <!-- Leaflet.js (Mapas) -->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script>
+<!-- Leaflet.js (Mapas) -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script>
     // Inicializar o mapa
     var map = L.map('map').setView([-24.703336097821495, -48.0061888911996], 13);
 
@@ -150,6 +142,8 @@
             alert("Geolocalização não é suportada pelo seu navegador.");
         }
     });
-    </script>
+</script>
+
+
 
 </html>
