@@ -32,9 +32,7 @@
         <a href="quem_somos.php">Quem Somos</a>
         <a href="https://www.facebook.com/AcademiaAcquaVida/photos_by?locale=pt_BR" target="_blank">Fotos</a>
         <a href="https://www.facebook.com/AcademiaAcquaVida/videos?locale=pt_BR" target="_blank">Videos</a>
-
-
-        <a href="login.php">Login</a>
+        <a href="./senha/DashAcesso.php">Login</a>
     </nav>
 
     <!--quem somos-->
@@ -51,6 +49,30 @@
 
     </section>
 
+    <!--Ver serviços ou contatos-->
+    <section class="container-servico-contatos">
+        <article class="servico">
+            <h1>Nossos Serviços.</h1>
+            <p class="servico-texto">
+                Temos atividades para toda a família:<br>
+                Saiba Mais
+            </p>
+            <div class="botoes-servicos-contatos">
+                <a href="#">Musculação</a>
+                <a href="#">Natação Baby</a>
+                <a href="#">Hidroterapia</a>
+                <a href="#">Natação Geral</a>
+                <a href="#">Hidroginástica</a>
+                <a href="#">Avaliação Física</a>
+            </div>
+            <p>
+                Entre em contato e venha fazer uma aula experimental!
+            </p>
+
+        </article>
+    </section>
+
+
     <section id="mapa" class="d-flex flex-column align-items-center">
         <div class="content text-center">
             <!-- Card com Mapa de Geolocalização -->
@@ -64,18 +86,8 @@
     </section>
 
 
-    <!--Ver serviços ou contatos-->
-    <section class="container-servico-contatos">
-        <h1>Obtenha mais informações na área de serviços e contacte-nos.</h1>
-        <div class="botoes-servicos-contatos">
-            <a href="servicos.html">Ver Serviços</a>
-            <a href="contatos.html">Contatos</a>
-        </div>
-
-    </section>
-
     <footer>
-        Inteligência Artificial &copy; 2030 | &reg; Todos os direitos reservados.
+        Academia Acque Vida &copy; 2030 | &reg; Todos os direitos reservados.
     </footer>
 
 </body>
@@ -107,42 +119,6 @@
     });
 </script>
 
-<!-- Leaflet.js (Mapas) -->
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-<script>
-    // Inicializar o mapa
-    var map = L.map('map').setView([-24.703336097821495, -48.0061888911996], 13);
-
-    // Adicionar a camada de mapa
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Adicionar marcador
-    L.marker([-24.703336097821495, -48.0061888911996]).addTo(map)
-        .bindPopup(
-            'Academia Acqua Vida<br>Rua Januário Lisboa, 82 - Vila Elias, Jacupiranga - SP')
-        .openPopup();
-
-    // Função para traçar a rota no Google Maps
-    document.getElementById('tracarRota').addEventListener('click', function() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                var lat = position.coords.latitude;
-                var lon = position.coords.longitude;
-                var destination = "-24.703336097821495, -48.0061888911996"; // Coordenadas da Academia
-                var url =
-                    `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
-                window.open(url, '_blank');
-            }, function() {
-                alert(
-                    "Não foi possível acessar a localização. Verifique suas permissões de geolocalização.");
-            });
-        } else {
-            alert("Geolocalização não é suportada pelo seu navegador.");
-        }
-    });
-</script>
 
 
 

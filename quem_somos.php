@@ -28,7 +28,8 @@
 
     <!--Navegação-->
     <nav class="container-navegacao">
-        <a href="index.php">Quem Somos</a>
+        <a href="index.php">Início</a>
+        <a href="quem_somos.php">Quem Somos</a>
         <a href="https://www.facebook.com/AcademiaAcquaVida/photos_by?locale=pt_BR" target="_blank">Fotos</a>
         <a href="https://www.facebook.com/AcademiaAcquaVida/videos?locale=pt_BR" target="_blank">Videos</a>
 
