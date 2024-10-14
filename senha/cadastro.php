@@ -1,14 +1,13 @@
 <?php
-include("../bd/conexao.php");
+include('../bd/conexao.php');
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
 $nome = $_POST['nomeCompleto'];
+$email = $_POST['email'];
 $usuario = $_POST['usuario'];
+$senha = $_POST['senha'];
 
-$cadUser = $conexao->prepare ("INSERT INTO acesso (emailUsuario, senhaUsuario, nomeUsuario, usuario) VALUES (?,?,?,?)");
-$cadUser->execute([$email, $senha, $nome, $usuario]);
+$cadUser = $instance->prepare ("INSERT INTO acesso (nomeUsuario, emailUsuario, usuario, senhaUsuario) VALUES (?,?,?,?)");
+$cadUser->execute([$nome, $email, $usuario, $senha]);
+
 header("Location: DashAcesso.php");
-
-
 ?>
