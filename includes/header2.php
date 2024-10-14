@@ -21,13 +21,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.php">Início</a>
+                        <a class="nav-link" aria-current="page" href="/views/listAluno.php">Aluno</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../quem_somos.php">Sobre</a>
+                        <a class="nav-link" href="../views/listProfessor.php">Professor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a class="nav-link" href="../views/listTreino.php">Treinos</a>
                     </li>
                 </ul>
             </div>
