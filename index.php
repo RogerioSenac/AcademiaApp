@@ -66,7 +66,7 @@
                 <a href="#">Avaliação Física</a>
             </div>
             <p>
-                Entre em contato e venha fazer uma aula experimental!
+                Venha nos visitar e fazer uma aula experimental!
             </p>
 
         </article>

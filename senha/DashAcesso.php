@@ -101,10 +101,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <button type="submit" class="btn btn-primary">Logar</button>
                         </div>
                     </form>
-                    <div class="text-center mt-3">
+                    <!-- <div class="text-center mt-3">
                         <a href="#" onclick="toggleForms()">Não tem uma conta? Cadastre-se</a>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Registration Form -->
                 <div id="registrationForm" style="display:none;">
