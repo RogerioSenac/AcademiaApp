@@ -1,0 +1,157 @@
+@import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
+
+/************************ Estrutura básica ******************************/
+* {
+    margin: o;
+    padding: o;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+color: #fff;
+}
+
+/**************************** Cabeçalho (Menu) ******************/
+header {
+        
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10vh; /* Altura do cabeçalho */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    
+}
+
+.nav_bar {
+    /* background-image: url('../imagem/piscina.jpg'); */
+    background: url('../imagem/piscina.jpg') no-repeat center center/cover;
+    /* background-color: #77B5C6; */
+    
+}
+
+.navbar-brand .img-fluid{
+    display: flex;
+    position: relative;
+    margin-left: 20px;    
+    /* border-radius: 50%; */
+}
+
+.navbar-nav {
+    border: 3px solid rgba(255, 255, 255, 0.11);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Suaviza a transição */
+}
+
+.navbar-nav a {
+    position: relative;
+    text-decoration: none;
+    color: white; /* Altere a cor conforme necessário */
+}
+
+.navbar-nav a::after {
+    content: '';
+    position: relative  ;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Reflexo */
+    transform: translateY(100%); /* Começa fora de vista */
+    transition: transform 0.3s ease; /* Suaviza a transição do reflexo */
+}
+
+.navbar-nav a:hover::after {
+    transform: translateY(0); /* Move para a posição original no hover */
+}
+
+.container-video-apresenta {
+    /* background-color: #034291; */
+    overflow: auto;
+    text-align: center;
+}
+
+.apresenta {
+    float: center;
+    margin: 0px auto;
+    /* background-color: #079AAC; */
+    /* background-color: whitesmoke; */
+    width: 50%;
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center;
+    /* border: solid red; */
+}
+
+
+.container-video-apresenta h1 {
+    color: black;
+    text-align: center;
+    padding: 20px;
+    /* border: solid green; */
+
+}
+
+#meuvideo{
+    justify-content: center;
+}
+
+/* container serviço*/
+
+.container-servico-contatos {
+    background-color: #082946;
+    padding: 80px;
+    text-align: center;
+}
+
+.container-servico-contatos .servico-texto {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    /* Alinha o texto pelo modo Justificado */
+    line-height: 1.6;
+    /* Opicional: melhora a legibilidade */
+
+}
+
+.servico ul a {
+    color: white;
+    text-decoration: none;
+    align-content: center;
+}
+
+.container-servico-contatos .botoes-servicos-contatos {
+    padding: 60px;
+    text-align: center;
+}
+
+.botoes-servicos-contatos a {
+    display: block;
+    max-width: 200px;
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: #008eb9;
+    color: white;
+    padding: 20px 60px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.botoes-servicos-contatos a:hover {
+    background-color: white;
+    color: black;
+}
