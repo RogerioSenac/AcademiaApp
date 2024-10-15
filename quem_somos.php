@@ -25,7 +25,7 @@ include("./includes/header.php")
         <article class="servico">
             <img class="icones" src="assets/imagem/icon_ironman.png" class="icone" alt="icone" alt="quemsomos">
             <p class="servico-texto">
-                Seja bem-vindo à <span class="servico-texto-realce"> Academia AcquaVida </span>, onde a paixão pela saúde e bem-estar se transforma em aprendizado e prática. Somos uma <span class="servico-texto-realce">escola de natação</span> e uma <span class="servico-texto-realce">academia</span> comprometida em promover um estilo de vida saudável para todos.<br>
+                Seja bem-vindo à <span class="servico-texto-realce"> Academia Acqua Vida </span>, onde a paixão pela saúde e bem-estar se transforma em aprendizado e prática. Somos uma <span class="servico-texto-realce">escola de natação</span> e uma <span class="servico-texto-realce">academia</span> comprometida em promover um estilo de vida saudável para todos.<br>
 
                 Nossa equipe dedicada trabalha em conjunto para oferecer um ambiente acolhedor e motivador, onde você pode desenvolver suas habilidades, melhorar sua condição física e, acima de tudo, se divertir. Venha fazer parte da nossa comunidade e descobrir como é possível unir esporte, saúde e amizade!<br>
 
@@ -36,7 +36,7 @@ include("./includes/header.php")
         <article class="servico">
             <img src="assets/imagem/icon-halter.png" class="icones" alt="icone" alt="Aparelhos Modernos">
             <p class="servico-texto">
-                Na <span class="servico-texto-realce"> Academia AcquaVida </span>, oferecemos uma infraestrutura de ponta, com equipamentos que garantem a melhor experiência para os nossos alunos. Nossas instalações foram cuidadosamente planejadas para atender a todas as suas necessidades, proporcionando um ambiente confortável e funcional.<br>
+                Na <span class="servico-texto-realce"> Academia Acqua Vida </span>, oferecemos uma infraestrutura de ponta, com equipamentos que garantem a melhor experiência para os nossos alunos. Nossas instalações foram cuidadosamente planejadas para atender a todas as suas necessidades, proporcionando um ambiente confortável e funcional.<br>
 
                 Estamos comprometidos em oferecer a você não apenas um espaço para treinar, mas um verdadeiro centro de saúde e bem-estar. Venha descobrir como podemos ajudar você a alcançar seus objetivos de forma eficiente e agradável!
             </p>
@@ -45,7 +45,7 @@ include("./includes/header.php")
         <article class="servico">
             <img src="assets/imagem/icon_personal-removebg-preview.png" class="icones" alt="icone" alt="Programadores experientes">
             <p class="servico-texto">
-                Na <span class="servico-texto-realce"> Academia AcquaVida </span>, contamos com uma equipe de profissionais altamente qualificados, dedicados a ajudar você a alcançar e superar seus limites. Nossos colaboradores são especialistas em suas áreas e estão sempre prontos para oferecer orientação, motivação e suporte personalizado.<br>
+                Na <span class="servico-texto-realce"> Academia Acqua Vida </span>, contamos com uma equipe de profissionais altamente qualificados, dedicados a ajudar você a alcançar e superar seus limites. Nossos colaboradores são especialistas em suas áreas e estão sempre prontos para oferecer orientação, motivação e suporte personalizado.<br>
 
                 Nosso compromisso é garantir que cada aluno tenha uma experiência única e transformadora, promovendo não apenas o desenvolvimento físico, mas também o fortalecimento da mente. Venha nos conhecer e descubra como podemos trabalhar juntos para que você atinja seus objetivos!
             </p>
