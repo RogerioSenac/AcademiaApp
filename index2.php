@@ -2,8 +2,6 @@
 include("../AcademiaApp/includes/header.php")
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -39,13 +37,25 @@ include("../AcademiaApp/includes/header.php")
                 Temos atividades para toda a família:<br>
                 Saiba Mais
             </p>
-            <div class="botoes-servicos-contatos">
-                <a href="#">Musculação</a>
-                <a href="#">Natação Baby</a>
-                <a href="#">Hidroterapia</a>
-                <a href="#">Natação Geral</a>
-                <a href="#">Hidroginástica</a>
-                <a href="#">Avaliação Física</a>
+            <div class="row botoes-servicos-contatos">
+                <div class="col-4">
+                    <a href="#">Musculação</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Hidroterapia</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Hidroginástica</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Natação Baby</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Natação Geral</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Avaliação Física</a>
+                </div>
             </div>
             <p class="servico-texto">
                 Venha nos visitar e fazer uma aula experimental!
@@ -53,9 +63,22 @@ include("../AcademiaApp/includes/header.php")
         </article>
     </section>
 
-
+     <!-- Seção Mapa-->
+     <section id="mapa" class="d-flex flex-column align-items-center">
+            <div class="content text-center">
+                <!-- Card com Mapa de Geolocalização -->
+                <h4>Encontre-nos no Mapa</h4>
+                <div id="map" style="height: 250px; width: 100%;"></div>
+                <div class="card bg-transparent border-light">
+                    <div class="card-mapa">
+                        <button id="tracarRota" class="btn btn-dark">Traçar Rota</button>
+                    </div>
+                </div>
+        </section>
+      
 
     <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+</html>
