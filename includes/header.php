@@ -37,10 +37,10 @@
                         <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'pages/Eventos/eventos.php') echo 'active'; ?>" href="pages/eventos/eventos.php">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.facebook.com/AcademiaAcquaVida/photos_by?locale=pt_BR" target="_blank">Galeria</a>
+                        <a class="nav-link" href="https://www.facebook.com/AcademiaAcquaVida/photos_by?locale=pt_BR" target="_blank">Fotos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Recursos</a>
+                        <a class="nav-link" href="https://www.facebook.com/AcademiaAcquaVida/videos?locale=pt_BR" target="_blank">Videos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contato</a>

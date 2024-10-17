@@ -63,22 +63,72 @@ include("../AcademiaApp/includes/header.php")
         </article>
     </section>
 
-     <!-- Seção Mapa-->
-     <section id="mapa" class="d-flex flex-column align-items-center">
-            <div class="content text-center">
-                <!-- Card com Mapa de Geolocalização -->
-                <h4>Encontre-nos no Mapa</h4>
-                <div id="map" style="height: 250px; width: 100%;"></div>
-                <div class="card bg-transparent border-light">
-                    <div class="card-mapa">
-                        <button id="tracarRota" class="btn btn-dark">Traçar Rota</button>
-                    </div>
+    <section id="mapa" class="d-flex flex-column align-items-center">
+        <div class="content text-center">
+            <h4>Encontre-nos no Mapa</h4>
+            <div id="map" style="height: 350px; width: 100%;"></div>
+            <div class="card bg-transparent border-light">
+                <div class="card-mapa">
+                    <button id="tracarRota" class="btn btn-dark">Traçar Rota</button>
                 </div>
-        </section>
-      <?php include("./includes/footer.php")?>
+            </div>
+        </div> <!-- Fechamento da div content -->
+    </section>
 
-    <!-- Scripts Bootstrap -->
+    <footer>
+        Academia Acqua Vida &copy; 2030 | &reg; Todos os direitos reservados.
+    </footer>
+
+    <script>
+        document.getElementById('meuVideo').addEventListener('ended', function() {
+            window.location.href = 'index.php';
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 
+    <!-- Leaflet.js (Mapas) -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-24.703404269966082, -48.00611380606861], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-24.703404269966082, -48.00611380606861]).addTo(map)
+            .bindPopup('Academia Acqua Vida - Jacupiranga<br>Rua Januario Lisboa, 82 - Vila Elias, Jacupiranga - SP')
+            .openPopup();
+
+        document.getElementById('tracarRota').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var lat = position.coords.latitude;
+                    var lon = position.coords.longitude;
+                    var destination = "-24.703404269966082, -48.00611380606861";
+                    var url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
+                    window.open(url, '_blank');
+                }, function() {
+                    alert("Não foi possível acessar a localização. Verifique suas permissões de geolocalização.");
+                });
+            } else {
+                alert("Geolocalização não é suportada pelo seu navegador.");
+            }
+        });
+    </script>
 </body>
 </html>

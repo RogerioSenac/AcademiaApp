@@ -1,30 +1,28 @@
+<?php
+include("../AcademiaApp/includes/header.php")
+    ?>
+
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia Acqua Vida</title>
-    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/estiloheader.css">
     <link rel="shortcut icon" href="assets/imagem/logo_acqua_vida.jpg" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 </head>
 
 <body>
-    <header class="container-cabecalho">
-        <a>
-            <img class="img" src="assets/imagem/logo_acqua_vida.jpg" alt="Logo da Empresa" title="Academia Acqua Vida">
-        </a>
-    </header>
-
-    <nav class="container-navegacao">
+    <!-- <nav class="container-navegacao">
         <a href="index.php">Início</a>
         <a href="quem_somos.php">Quem Somos</a>
         <a href="https://www.facebook.com/AcademiaAcquaVida/photos_by?locale=pt_BR" target="_blank">Fotos</a>
         <a href="https://www.facebook.com/AcademiaAcquaVida/videos?locale=pt_BR" target="_blank">Videos</a>
         <a href="./senha/DashAcesso.php">Login</a>
-    </nav>
+    </nav> -->
 
     <section class="container-video-apresenta">
         <article class="apresenta">
@@ -38,20 +36,31 @@
 
     <section class="container-servico-contatos">
         <article class="servico">
-            <h1>Nossos Serviços.</h1>
             <p class="servico-texto">
                 Temos atividades para toda a família:<br>
                 Saiba Mais
             </p>
-            <div class="botoes-servicos-contatos">
-                <a href="#">Musculação</a>
-                <a href="#">Natação Baby</a>
-                <a href="#">Hidroterapia</a>
-                <a href="#">Natação Geral</a>
-                <a href="#">Hidroginástica</a>
-                <a href="#">Avaliação Física</a>
+            <div class="row botoes-servicos-contatos">
+                <div class="col-4">
+                    <a href="#">Musculação</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Hidroterapia</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Hidroginástica</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Natação Baby</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Natação Geral</a>
+                </div>
+                <div class="col-4">
+                    <a href="#">Avaliação Física</a>
+                </div>
             </div>
-            <p>
+            <p class="servico-texto">
                 Venha nos visitar e fazer uma aula experimental!
             </p>
         </article>
@@ -61,7 +70,7 @@
         <div class="content text-center">
             <h4>Encontre-nos no Mapa</h4>
             <div id="map" style="height: 350px; width: 100%;"></div>
-            <div class="card bg-transparent border-light">
+            <div class="card bg-transparent">
                 <div class="card-mapa">
                     <button id="tracarRota" class="btn btn-dark">Traçar Rota</button>
                 </div>
@@ -74,7 +83,7 @@
     </footer>
 
     <script>
-        document.getElementById('meuVideo').addEventListener('ended', function() {
+        document.getElementById('meuVideo').addEventListener('ended', function () {
             window.location.href = 'index.php';
         });
     </script>
@@ -98,25 +107,25 @@
     <!-- Leaflet.js (Mapas) -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([-24.700397865367883, -48.003950472843286], 13);
+        var map = L.map('map').setView([-24.703404269966082, -48.00611380606861], 13);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([-24.700397865367883, -48.003950472843286]).addTo(map)
-            .bindPopup('Igreja Presbiteriana do Brasil - Jacupiranga<br>Av. 23 de Junho, 262 - Vila Elias, Jacupiranga - SP')
+        L.marker([-24.703404269966082, -48.00611380606861]).addTo(map)
+            .bindPopup('Academia Acqua Vida - Jacupiranga<br>Rua Januario Lisboa, 82 - Vila Elias, Jacupiranga - SP')
             .openPopup();
 
-        document.getElementById('tracarRota').addEventListener('click', function() {
+        document.getElementById('tracarRota').addEventListener('click', function () {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
+                navigator.geolocation.getCurrentPosition(function (position) {
                     var lat = position.coords.latitude;
                     var lon = position.coords.longitude;
-                    var destination = "-24.700397865367883, -48.003950472843286";
+                    var destination = "-24.703404269966082, -48.00611380606861";
                     var url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
                     window.open(url, '_blank');
-                }, function() {
+                }, function () {
                     alert("Não foi possível acessar a localização. Verifique suas permissões de geolocalização.");
                 });
             } else {

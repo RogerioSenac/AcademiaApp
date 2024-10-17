@@ -157,9 +157,9 @@ header {
 }
 
 
-/*************************** Seção Mapa *************************/
+/************* Seção: Mapa *******************/
 #mapa {
-    /* background-image: url('../img/imgDiversas/gps_smartPhone375x250.jpg'); */
+    background-image: url('../imagem/gps_smartPhone375x250.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -191,3 +191,4 @@ header {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+
