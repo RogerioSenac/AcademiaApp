@@ -27,7 +27,7 @@ include("../AcademiaApp/includes/header.php")
     <section class="container-video-apresenta">
         <article class="apresenta">
             <h1>Prazer somos a Acqua Vida!</h1>
-            <video id="meuVideo" width="640" height="360" controls autoplay muted>
+            <video id="meuVideo" width="440" height="260" controls autoplay muted>
                 <source src="./Assets/videos/video_apresentacao.mp4" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>

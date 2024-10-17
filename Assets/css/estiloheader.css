@@ -107,7 +107,7 @@ header {
 
 
 .container-video-apresenta h1 {
-    color: black;
+    color: white;
     text-align: center;
     padding: 20px;
     /* border: solid green; */
@@ -116,6 +116,10 @@ header {
 
 #meuvideo {
     justify-content: center;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    color: white;
 }
 
 /* container Pagina Quem Somos */
